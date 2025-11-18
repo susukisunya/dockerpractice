@@ -1,6 +1,7 @@
 # dockerpractice  
 ## このディレクトリについて  
 ### ディレクトリ構成  
+# Tab
 .  
 │  filetree.txt  
 │  README.md  
@@ -16,6 +17,7 @@
         input.txt  
         main.py  
         output.txt  
+---
 ### コマンド一覧  
 以下のコマンドは、dockerfile_c もしくは、 dockerfile_py にいる状態で実行してください
 1. Dockerfileからコンテナイメージを作成したいとき
