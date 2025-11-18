@@ -1,6 +1,8 @@
 #cバージョン
 FROM ubuntu:22.04
 
+USER root
+
 RUN apt update
 RUN apt install -y build-essential
 RUN apt install -y diffutils
