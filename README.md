@@ -1,21 +1,21 @@
 # dockerpractice  
 ## このディレクトリについて  
 ### ディレクトリ構成  
-.
-├── filetree.txt
-├── README.md
-├── dockerfile_c
-│   ├── Dockerfile
-│   ├── input.txt
-│   ├── main.c
-│   └── output.txt
-└── dockerfile_python
-    ├── Dockerfile
-    ├── input.txt
-    ├── main.py
-    └── output.txt
+.  
+├── filetree.txt  
+├── README.md  
+├── dockerfile_c  
+│   ├── Dockerfile  
+│   ├── input.txt  
+│   ├── main.c  
+│   └── output.txt  
+└── dockerfile_python  
+    ├── Dockerfile  
+    ├── input.txt  
+    ├── main.py  
+    └── output.txt  
 ### コマンド一覧  
-以下のコマンドは、dockerfile_c もしくは、 dockerfile_py にいる状態で実行してください
+以下のコマンドは、dockerfile_c もしくは、 dockerfile_python にいる状態で実行してください
 1. Dockerfileからコンテナイメージを作成したいとき
     - docker build  -t コンテナイメージのタグ(testimage:1.0など) .
 1. コンテナイメージからコンテナを作成したいとき
@@ -27,7 +27,7 @@
 1. コンテナイメージを削除したいとき(削除したいコンテナイメージで作成したコンテナが存在しない状態で実行してください)
     - docker rmi コンテナイメージのタグ  
 ### 使い方  
-1. dockerfile_c または dockerfile_py 直下に移動する  
+1. dockerfile_c または dockerfile_python 直下に移動する  
 1. input.txtとoutput.txtに文字を入力して保存する
 1. コマンド一覧の1のコマンドを実行してコンテナイメージを作成する  
 1. 2のコマンドを実行してコンテナを作成する
