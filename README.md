@@ -11,7 +11,11 @@
 │  ├─main.c  
 │  └─output.txt  
 │        
-└─dockerfile_python    ├─Dockerfile    ├─input.txt    ├─main.py    └─output.txt  
+└─dockerfile_python  
+_  ├─Dockerfile    
+_  ├─input.txt    
+_  ├─main.py    
+_  └─output.txt  
 ### コマンド一覧  
 以下のコマンドは、dockerfile_c もしくは、 dockerfile_py にいる状態で実行してください
 1. Dockerfileからコンテナイメージを作成したいとき
