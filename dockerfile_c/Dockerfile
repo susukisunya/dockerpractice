@@ -5,7 +5,6 @@ USER root
 
 RUN apt update
 RUN apt install -y build-essential
-RUN apt install -y diffutils
 
 COPY main.c .
 COPY input.txt .
@@ -14,17 +13,18 @@ COPY output.txt .
 RUN gcc -o app main.c
 
 CMD sh -c " \
-    ./app < input.txt > result.txt; \
+    STR1=`./app < input.txt` \
     \
-    EXIT_CODE=$?; \
+    EXIT_CODE=$? \
     \
     if [ $EXIT_CODE -ne 0 ]; then \
-      echo 'RE'; \
+      echo 'RE' \
     else \
-      if diff -q result.txt expected_output.txt > /dev/null 2>&1; then \
-        echo 'AC'; \
+      STR2=`cat output.txt`
+      if [ $STR1 = $STR2]; then \
+        echo 'AC' \
       else \
-        echo 'WA'; \
+        echo 'WA' \
       fi \
     fi \
   "

@@ -11,17 +11,17 @@ COPY output.txt .
 COPY main.py .
 
 CMD sh -c " \
-    python3 main.py < input.txt > result.txt; \
+    STR1=`python3 main.py < input.txt` \
     \
-    EXIT_CODE=$?; \
+    EXIT_CODE=$? \
     \
     if [ $EXIT_CODE -ne 0 ]; then \
-      echo 'RE'; \
+      echo 'RE' \
     else \
-      if diff -q result.txt expected_output.txt > /dev/null 2>&1; then \
-        echo 'AC'; \
+      if [ $STR1 = $STR2 ]; then \
+        echo 'AC' \
       else \
-        echo 'WA'; \
+        echo 'WA' \
       fi \
     fi \
   "
