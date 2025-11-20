@@ -6,22 +6,11 @@ USER root
 RUN apt update
 RUN apt install -y python3
 
-COPY input.txt .
-COPY output.txt .
-COPY main.py .
+RUN mkdir /volume
 
-CMD sh -c " \
-    STR1=`python3 main.py < input.txt` \
-    \
-    EXIT_CODE=$? \
-    \
-    if [ $EXIT_CODE -ne 0 ]; then \
-      echo 'RE' \
-    else \
-      if [ $STR1 = $STR2 ]; then \
-        echo 'AC' \
-      else \
-        echo 'WA' \
-      fi \
-    fi \
-  "
+COPY input.txt ./volume
+COPY output.txt ./volume
+COPY main.py ./volume
+COPY main.sh ./volume
+
+CMD sh ./volume/main.sh
