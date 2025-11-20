@@ -6,10 +6,10 @@
 ├── README.md
 ├── dockerfile_c //main.cを使って文字列判定をするファイル
 │   ├── Dockerfile
-│   ├── input.txt
-│   ├── main.c
-|   ├── main.sh
-│   └── output.txt
+│   ├── input.txt 
+│   ├── main.c 
+|   ├── main.sh　
+│   └── output.txt 
 └── dockerfile_python //main.pyを使って文字列判定をするファイル
     ├── Dockerfile
     ├── input.txt
